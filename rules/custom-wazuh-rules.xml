@@ -1,0 +1,13 @@
+<!-- Custom Wazuh Rules - SOC Home Lab - INC-001 -->
+<group name="custom,bruteforce,">
+  <rule id="100001" level="12">
+    <if_matched_sid>60122</if_matched_sid>
+    <same_source_ip />
+    <frequency>10</frequency>
+    <timeframe>300</timeframe>
+    <description>SMB Brute Force - 10 failed logons in 5 min - INC-001</description>
+    <mitre>
+      <id>T1110.002</id>
+    </mitre>
+  </rule>
+</group>
